@@ -46,8 +46,8 @@ According to the official document, the preprocessing are:
 
 ## Set up environment
 * Google colab
-* Python 3.6
-* Tensorflow 1.X
+  * Python 3.6
+  * Tensorflow 1.X
 
 ## Model
 Use Keras to implement:
