@@ -37,8 +37,8 @@ B|2068|293|blinded
 C|1740|264|blinded
 Total|5600|800|blinded
 
-## Data preprocess
-According to offical document, the preprocessing are:
+## Data preprocessing
+According to the official document, the preprocessing are:
 * Resize image as (224, 224)
 * Rotate the image by angle, the degree is 15.
 * Horizontally flip the image with given probability, the porbability is 0.5.
@@ -100,7 +100,7 @@ ResNeXt50|59.000%|64.188%
 VGG16|65.250%|72.250%
 
 ## Ensemble learning - Voting
-According to the predict accuracy, we can know VGG16 is better than DenseNet121 and ResNeXt50.  
+According to the predict accuracy, VGG16 is better than DenseNet121 and ResNeXt50.  
 So, the voting weights are:
 Model name|Voting weights
 ----------|--------
@@ -114,7 +114,7 @@ Model name|Baseline|Keras
 ----------|--------|-----
 R+V+D|65.688%|72.250%
 
-## Offical highest predict accuracy model vs. Keras
+## Official highest predict accuracy model vs. Keras
 In "Model name" column, the A is AlexNet.
 Model name|Predict Accuracy
 ----------|----------------
