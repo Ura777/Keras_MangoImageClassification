@@ -12,7 +12,7 @@ In this project, we try to use Keras to implement simple DenseNet121, ResNeXt50 
 
 ## Dataset
 There are 2 stages.   
-In stage 1, competitors will get Train set and Development.  
+In stage 1, competitors will get Train set and Development set.  
 In stage 2, competitors will get Test set.
 
 * Train set
