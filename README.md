@@ -3,7 +3,7 @@ This project was inspired by [AI CUP 2020 Mango Image Recognition Challenge](htt
 The purpose of this challenge is helping mango farmers to classify the grade of mango quickly and robust.  
 In this project, we try to use Keras to implement simple DenseNet121, ResNeXt50 and VGG16 in short time.
 
-**Thanks for my teammate to finish this project together!!!**
+**Thanks for my teammates to finish this project together!!!**
 
 ## Grade description
 * A: The mango has no blemishes and the color is even and beautiful.  
