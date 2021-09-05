@@ -29,13 +29,13 @@ In stage 2, competitors will get Test set.
   1600 images.  
   No labels.
  
-Number of images per grade in the dataset:
-Grade|Train set|Development set| Test set
------|---------|---------------|---------
-A|1792|243|blinded
-B|2068|293|blinded
-C|1740|264|blinded
-Total|5600|800|blinded
+Number of images per grade in the dataset:  
+|Grade|Train set|Development set| Test set |
+|-----|---------|---------------|---------|
+|A    |1792     |243            |blinded|
+|B    |2068     |293            |blinded|
+|C    |1740     |264            |blinded|
+|Total|5600     |800            |blinded|
 
 ## Data preprocessing
 According to the official document, the preprocessing are:
@@ -60,65 +60,65 @@ All models are save best weights.
 Because of the limitation from Google colab, all models freeze some layers.  
 
 **DenseNet121**
-Parameter name|Value
---------------|-----
-optimizer|SGD(lr=0.01, momentum=0.9)
-loss|binary_crossentropy
-metrics|accuracy
-epochs|100
-early stopping|10 epochs
-batch_size|128
+|Parameter name|Value|
+|--------------|-----|
+|optimizer|SGD(lr=0.01, momentum=0.9)|
+|loss|binary_crossentropy|
+|metrics|accuracy|
+|epochs|100|
+|early stopping|10 epochs|
+|batch_size|128|
 
 **ResNeXt50**
-Parameter name|Value
---------------|-----
-optimizer|SGD(lr=0.01, momentum=0.9)
-loss|binary_crossentropy
-metrics|accuracy
-epochs|100
-early stopping|10 epochs
-batch_size|64
+|Parameter name|Value|
+|--------------|-----|
+|optimizer|SGD(lr=0.01, momentum=0.9)|
+|loss|binary_crossentropy|
+|metrics|accuracy|
+|epochs|100|
+|early stopping|10 epochs|
+|batch_size|64|
 
 **VGG16**
-Parameter name|Value
---------------|-----
-optimizer|SGD(lr=0.01, momentum=0.9)
-loss|binary_crossentropy
-metrics|accuracy
-epochs|100
-early stopping|10 epochs
-batch_size|128
+|Parameter name|Value|
+|--------------|-----|
+|optimizer|SGD(lr=0.01, momentum=0.9)|
+|loss|binary_crossentropy|
+|metrics|accuracy|
+|epochs|100|
+|early stopping|10 epochs|
+|batch_size|128|
 
 ## Predict accuracy
 In "Model name" column, the R is ResNeXt50, V is VGG16, D is DenseNet121 and A is AlexNet.
-R+V+D|65.688%|72.250%
+|R+V+D|65.688%|72.250%|
 
-Model name|Baseline|Keras
-----------|--------|-----
-DenseNet121|49.875%|61.188%
-ResNeXt50|59.000%|64.188%
-VGG16|65.250%|72.250%
+|Model name|Baseline|Keras|
+|----------|--------|-----|
+|DenseNet121|49.875%|61.188%|
+|ResNeXt50|59.000%|64.188%|
+|VGG16|65.250%|72.250%|
 
 ## Ensemble learning - Voting
 According to the predict accuracy, VGG16 is better than DenseNet121 and ResNeXt50.  
 So, the voting weights are:
-Model name|Voting weights
-----------|--------
-DenseNet121|1
-ResNeXt50|1
-VGG16|3
+|Model name|Voting weights|
+|----------|--------|
+|DenseNet121|1|
+|ResNeXt50|1|
+|VGG16|3|
 
 ## Ensemble learnig - Predict accuracy
 In "Model name" column, the R is ResNeXt50, V is VGG16 and D is DenseNet121.
-Model name|Baseline|Keras
-----------|--------|-----
-R+V+D|65.688%|72.250%
+|Model name|Baseline|Keras|
+|----------|--------|-----|
+|R+V+D|65.688%|72.250%|
 
 ## Official highest predict accuracy model vs. Keras
 In "Model name" column, the A is AlexNet.
-Model name|Predict Accuracy
-----------|----------------
-A+V+D|70.250%
-R+V+D|72.250%
+|Model name|Predict Accuracy|
+|----------|----------------|
+|A+V+D|70.250%|
+|R+V+D|72.250%|
 
 
